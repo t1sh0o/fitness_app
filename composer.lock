@@ -306,21 +306,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-<<<<<<< HEAD
                 "reference": "ecaa6fbc7aeb8c7c704060b6b929da768c2f7488"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/ecaa6fbc7aeb8c7c704060b6b929da768c2f7488",
                 "reference": "ecaa6fbc7aeb8c7c704060b6b929da768c2f7488",
-=======
-                "reference": "ec96c649d6361a10977c4ee8357b432aa9b46db5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ec96c649d6361a10977c4ee8357b432aa9b46db5",
-                "reference": "ec96c649d6361a10977c4ee8357b432aa9b46db5",
->>>>>>> e818c0b0934084abfe769a9aa0f70d2f5ac02ed5
                 "shasum": ""
             },
             "require": {
