@@ -36,5 +36,4 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		$arr = explode('@', $this->email);
 		return $arr[0];
 	}
-
 }

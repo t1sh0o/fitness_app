@@ -306,12 +306,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
+<<<<<<< HEAD
                 "reference": "ecaa6fbc7aeb8c7c704060b6b929da768c2f7488"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/ecaa6fbc7aeb8c7c704060b6b929da768c2f7488",
                 "reference": "ecaa6fbc7aeb8c7c704060b6b929da768c2f7488",
+=======
+                "reference": "ec96c649d6361a10977c4ee8357b432aa9b46db5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ec96c649d6361a10977c4ee8357b432aa9b46db5",
+                "reference": "ec96c649d6361a10977c4ee8357b432aa9b46db5",
+>>>>>>> e818c0b0934084abfe769a9aa0f70d2f5ac02ed5
                 "shasum": ""
             },
             "require": {
@@ -417,7 +426,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2015-01-19 20:27:32"
+=======
+            "time": "2015-01-19 01:41:51"
+>>>>>>> e818c0b0934084abfe769a9aa0f70d2f5ac02ed5
         },
         {
             "name": "league/flysystem",
@@ -425,12 +438,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
+<<<<<<< HEAD
                 "reference": "0ba6b6dfd6f456905ee8d6b0bcaab7ec89419b93"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/0ba6b6dfd6f456905ee8d6b0bcaab7ec89419b93",
                 "reference": "0ba6b6dfd6f456905ee8d6b0bcaab7ec89419b93",
+=======
+                "reference": "f705d26e1a6c879e4278d4bc88422ea2a8a792af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f705d26e1a6c879e4278d4bc88422ea2a8a792af",
+                "reference": "f705d26e1a6c879e4278d4bc88422ea2a8a792af",
+>>>>>>> e818c0b0934084abfe769a9aa0f70d2f5ac02ed5
                 "shasum": ""
             },
             "require": {
@@ -500,7 +522,11 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
             "time": "2015-01-19 19:19:07"
+=======
+            "time": "2015-01-19 08:19:58"
+>>>>>>> e818c0b0934084abfe769a9aa0f70d2f5ac02ed5
         },
         {
             "name": "monolog/monolog",
