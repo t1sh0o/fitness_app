@@ -26,7 +26,7 @@
 									<td>{{ $card['fitness_center'] }}</td>
 									<td>{{ $card['times_visited'] }}</td>
 									<td>{{ $card['max_visits'] }}</td>
-									<td>{{ $card['expire_date'] }}</td>
+									<td>{{ formatDate($card['expire_date'], 'd M Y') }}</td>
 								</tr>   
 								@endforeach
 								</tbody>
