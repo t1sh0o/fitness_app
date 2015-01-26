@@ -14,6 +14,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::patch('home/{id}', 'HomeController@update');
 
 Route::get('home/cards', 'FitnessCardController@index');
 

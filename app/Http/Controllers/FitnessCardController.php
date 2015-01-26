@@ -17,8 +17,8 @@ class FitnessCardController extends Controller {
 	public function index()
 	{
 		$cards = Card::where('expire_date', '>', Carbon::now())->get();
-
-		return view('profile.fitness_card', compact('cards'));
+		
+		return view('home', compact('cards'));
 	}
 
 	/**

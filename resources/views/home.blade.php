@@ -8,7 +8,38 @@
 				<div class="panel-heading">Home</div>
 
 				<div class="panel-body">
-					You are logged in!
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>User</th>
+									<th>Fitness Center</th>
+									<th>Visits</th>
+									<th>Max Visits</th>
+									<th>Expire Date</th>
+									<th>Mark train</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach ($cards as $card)
+								<tr>
+									<td>{{ Auth::user()->name() }}</td>
+									<td>{{ $card['fitness_center'] }}</td>
+									<td>{{ $card['times_visited'] }}</td>
+									<td>{{ $card['max_visits'] }}</td>
+									<td>{{ formatDate($card['expire_date'], 'd M Y') }}</td>
+									<td>
+										{!! Form::open([ 'url' => '/home/' . $card->id, 'method' => 'patch']) !!}
+											{!! Form::submit('I`ve trained', ['class' => "btn btn-primary"]) !!}
+											
+										{!! Form::close() !!}
+									</td>
+								</tr>   
+								@endforeach
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

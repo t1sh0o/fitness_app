@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\Card;
+use Carbon\Carbon;
+
 class HomeController extends Controller {
 
 	/*
@@ -30,7 +33,18 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$cards = Card::where('expire_date', '>', Carbon::now())->get();
+		
+		return view('home', compact('cards'));
+	}
+
+	public function update($id)
+	{
+		$card = Card::findOrFail($id);
+		$card->times_visited++;
+		$card->save();
+
+		return \Redirect::back();
 	}
 
 }
