@@ -9,13 +9,27 @@ class Card extends Model{
 
 	protected $fillable = ['user_id', 'fitness_center', 'max_visits', 'expire_date'];
 
-	function scopeNotExpired($query) {
+	public $dates = ['expire_date'];
+
+	function scopeNotExpired($query) 
+	{
 		$query->where('expire_date', '>', Carbon::now());
 	}
 
+	function scopeWillExpireSoon($query, $days) 
+	{
+		$query->where('expire_date', '<', Carbon::now()->addDays($days));
+	}
+
+	function scopeNotNotified($query) 
+	{
+		$query->where('notified', 0);
+	}
+
+
 	function user()
 	{
-		return $this->hasOne('\App\User');
+		return $this->belongsTo('\App\User');
 	}
 
 	function incrementVisits()

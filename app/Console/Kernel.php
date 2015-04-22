@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'App\Console\Commands\Inspire',
+		'App\Console\Commands\SendExpirationCommand',
 	];
 
 	/**
@@ -22,8 +23,12 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected function schedule(Schedule $schedule)
 	{
-		$schedule->command('inspire')
+/*		$schedule->command('inspire')
 				 ->hourly();
+*/	
+
+		$schedule->command('fitness_app:send-expiration-email')
+				 ->dailyAt('15:00');
 	}
 
 }

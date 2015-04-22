@@ -10,14 +10,25 @@ use Illuminate\Support\Facades\View;
 
 class FitnessCardController extends Controller {
 
+	/**
+	 * @var Card
+     */
 	public $card;
 
+	/**
+	 * @param Card $card
+     */
 	public function __construct(Card $card)
 	{
 		$this->card = $card;
 		$this->middleware('auth');
 	}
 
+	/**
+	 * Shows all user's cards
+	 *
+	 * @return View
+     */
 	public function index()
 	{
 		$cards = Auth::user()->cards()->notExpired()->get();
@@ -25,6 +36,12 @@ class FitnessCardController extends Controller {
 		return view('cards', compact('cards'));
 	}
 
+	/**
+	 * Stores new card
+	 *
+	 * @param Requests\CreateCardRequest $request
+	 * @return \Illuminate\Http\RedirectResponse
+     */
 	public function store(Requests\CreateCardRequest $request)
 	{
 		$this->card->fill($request->only(['fitness_center', 'max_visits', 'expire_date']));
@@ -34,6 +51,12 @@ class FitnessCardController extends Controller {
 		return back();
 	}
 
+	/**
+	 * Make one training
+	 *
+	 * @param $id
+	 * @return \Illuminate\Http\RedirectResponse
+     */
 	public function update($id)
 	{
 		$card = $this->card->findOrFail($id);
