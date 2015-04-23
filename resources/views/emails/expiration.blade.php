@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Hi {{ $username }},</h1>
-    <h1>Your card will expirire after {{ $days }} days.</h1>
+    <h1>Your fitness card for {{ $center }} will expirire in {{ $days }} days.</h1>
 
 </body>
 </html>

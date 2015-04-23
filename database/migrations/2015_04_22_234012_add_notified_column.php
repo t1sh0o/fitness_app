@@ -14,7 +14,7 @@ class AddNotifiedColumn extends Migration {
 	{
 		Schema::table('fitness_card', function(Blueprint $table)
 		{
-			$table->binary('notified');
+			$table->boolean('notified');
 		});
 	}
 

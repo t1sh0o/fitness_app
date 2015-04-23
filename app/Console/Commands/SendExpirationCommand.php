@@ -62,8 +62,9 @@ class SendExpirationCommand extends Command {
 
 		foreach ($cards as $card) {
 			$username = $this->getUsername($card['user']['email']);
+			$center = $card['fitness_center'];
 	
-			\Mail::send('emails.expiration', compact('days', 'username'), function($message) use ($card){
+			\Mail::send('emails.expiration', compact('days', 'username', 'center'), function($message) use ($card){
 				$message->from('notifier@fitness.app');
 				$message->to($card['user']['email']);
 				$message->subject('Card expiration notification');
